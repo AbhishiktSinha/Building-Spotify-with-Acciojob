@@ -8,11 +8,15 @@
 </head>
 
 <body>
+
+    <!-- =========================== S I D E    N A V B A R ===================== -->
     <aside class="side-navbar">
 
         <div class="top-side-navbar">
-            <div class="spotify-logo-container">
-                <img src="./assets/Spotify-logo.svg" alt="spotify-logo">
+            <div class="spotify-logo-row-container">
+                <div class="spotify-logo-image-container">
+                    <img src="./assets/Spotify-logo.svg" alt="spotify-logo">
+                </div>
             </div>
             
             <div class="top-links-container-side-navbar">
@@ -60,7 +64,7 @@
                 
                 <a href="#" class="side-navbar-link-outer">
                     <div class="side-navbar-link-container">
-                        <div class="link-icon-container">
+                        <div class="link-icon-container" id="create-playlist-link-icon-container">
                             <img style="background: white;" src="./assets/side-navbar-icons/create-playlist-side-navbar.svg" alt="home">
                         </div>
                         <div class="link-text-container">
@@ -71,7 +75,7 @@
 
                 <a href="#" class="side-navbar-link-outer">
                     <div class="side-navbar-link-container">
-                        <div class="link-icon-container" id="liked-songs-icon-container">
+                        <div class="link-icon-container" id="liked-songs-link-icon-container">
                             <img src="./assets/side-navbar-icons/small-heart.svg" alt="home">
                         </div>
                         <div class="link-text-container">
@@ -82,7 +86,7 @@
 
                 <a href="#" class="side-navbar-link-outer">
                     <div class="side-navbar-link-container">
-                        <div class="link-icon-container" id="your-episodes-icon-container">
+                        <div class="link-icon-container" id="your-episodes-link-icon-container">
                             <img src="./assets/side-navbar-icons/your-episodes-side-navbar.svg" alt="home">
                         </div>
                         <div class="link-text-container">
@@ -172,92 +176,120 @@
 
     </aside>
     
+    <!-- ========================================= T O P    N A V B A R =========================== -->
     <nav class="main-top-navbar">
         <div class="navbar-left-container">
-            <button class="round-button nabar-left-button">
+            <button class="round-button navbar-left-button scale-up-button ">
                 <img src="./assets/navbar/angle-left-small.svg" alt="backward">
             </button>
             
-            <button class="round-button nabar-left-button">
+            <button class="round-button navbar-left-button scale-up-button ">
                 <img src="./assets/navbar/angle-right-small.svg" alt="forward">
             </button>
         </div>
 
         <div class="navbar-right-container">
             <button class="profile-button navbar-right-button">
-                <div class="profile-icon-container" style="width: 37px; height: 37px; border-radius: 50%; overflow: hidden;">
-                    <img src="./assets/navbar/profile-icon.png" style="width: 100%; height: 100%; object-fit: contain;" alt="you">
+                <div class="profile-details-container">
+                    <div class="profile-icon-container">
+                        <img src="./assets/navbar/profile-icon.png" alt="you">
+                    </div>
+                    <div class="profile-name-container">Your Name</div>
                 </div>
 
-                <div class="profile-name-container">
-                    <p class="profile-container">Your Name</p>
+                <div class="arrow-down-container">
                     <img src="./assets/navbar/caret-down.svg" alt="caret-down">
                 </div>
             </button>
         </div>
     </nav>
 
+    <!-- ================================= M  A  I  N ========================================== -->
     <main>
         <!-- scrollable container -->
         <div class="main-inner-container">
+
+            <!-- -------------------------------- HERO SECTION ------------------------- -->
             <section class="hero-section">
                 <h1 class="hero-heading">
                     Good Morning
                 </h1>
     
                 <div class="hero-cards-section">
-    
-                    <div class="hero-card">
-                        <div class="hero-card-image-container" style="width: 100px; height: 100px; overflow: hidden;">
-                            <img src="./assets/hero-section/card-image-edm.jpg" style="width: 100%; height:100px; object-fit: cover;" alt="edm-mix">
+                        
+                    <div class="hero-card" id="hero-card-1">
+                        <div class="hero-card-image-container">
+                            <img src="./assets/hero-section/fi-ss-heart (1).svg">
                         </div>
-                        <div class="hero-card-title-container">
-                            card title lorem ipsum
+                        <div class="hero-card-right-container">
+                            <p class="hero-card-title">
+                                liked songs
+                            </p>
                         </div>
+                        <button class="hero-card-green-play-button round-button scale-down-button">
+                            <img src="./assets/playlist-page/play-button-green.svg" alt="">
+                        </button>                            
                     </div>
                     
-                    <div class="hero-card">
-                        <div class="hero-card-image-container" style="width: 100px; height: 100px; overflow: hidden;">
-                            <img src="./assets/hero-section/card-image-edm.jpg" style="width: 100%; height:100px; object-fit: cover;" alt="edm-mix">
+                    <div class="hero-card" id="hero-card-2">
+                        <div class="hero-card-image-container">
+                            <img src="./assets/hero-section/nefffex-playlist-image-with-gradient.png">
                         </div>
-                        <div class="hero-card-title-container">
-                            card title lorem ipsum
+                        <div class="hero-card-right-container">
+                            <p class="hero-card-title">
+                                NEFFEX playlist
+                            </p>
                         </div>
+                        <button class="hero-card-green-play-button round-button scale-down-button">
+                            <img src="./assets/playlist-page/play-button-green.svg" alt="">
+                        </button>                            
                     </div>
                     
-                    <div class="hero-card">
-                        <div class="hero-card-image-container" style="width: 100px; height: 100px; overflow: hidden;">
-                            <img src="./assets/hero-section/card-image-edm.jpg" style="width: 100%; height:100px; object-fit: cover;" alt="edm-mix">
+                    <div class="hero-card" id="hero-card-3">
+                        <div class="hero-card-image-container">
+                            <img src="./assets/hero-section/card-image-edm.jpg">
                         </div>
-                        <div class="hero-card-title-container">
-                            card title lorem ipsum
+                        <div class="hero-card-right-container">
+                            <p class="hero-card-title">
+                                card title lorem ipsum Lorem ipsum dolor sit amet.
+                            </p>
                         </div>
+                        <button class="hero-card-green-play-button round-button scale-down-button">
+                            <img src="./assets/playlist-page/play-button-green.svg" alt="">
+                        </button>                            
                     </div>
     
-                    <div class="hero-card">
-                        <div class="hero-card-image-container" style="width: 100px; height: 100px; overflow: hidden;">
-                            <img src="./assets/hero-section/card-image-edm.jpg" style="width: 100%; height:100px; object-fit: cover;" alt="edm-mix">
+                    <div class="hero-card" id="hero-card-4">
+                        <div class="hero-card-image-container">
+                            <img src="./assets/hero-section/card-image-edm.jpg">
                         </div>
-                        <div class="hero-card-title-container">
-                            card title lorem ipsum
+                        <div class="hero-card-right-container">
+                            <p class="hero-card-title">
+                                dance /electronic mix
+                            </p>
                         </div>
+                        <button class="hero-card-green-play-button round-button scale-down-button">
+                            <img src="./assets/playlist-page/play-button-green.svg" alt="">
+                        </button>                            
                     </div>
     
                 </div>
             </section>
     
-            <section class="your-shows">
+            <!-- ------------------------- SHOWS CONTAINER ---------------------------- -->
+            <section class="your-shows-container">
                 <div class="shows-header">
                     <h1>Shows you might like</h1>
-                    <a href="playlist-page.html">SEE ALL</a>
+                    <a href="playlist-page.html">see all</a>
                 </div>
     
-                <div class="shows-card-container">
+                <div class="shows-card-outer-container">
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-01.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -267,10 +299,11 @@
                         </div>
                     </div>
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-02.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -280,10 +313,11 @@
                         </div>
                     </div>
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-03.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -293,10 +327,11 @@
                         </div>
                     </div>
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-04.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -306,10 +341,11 @@
                         </div>
                     </div>
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-02.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -319,10 +355,11 @@
                         </div>
                     </div>
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-01.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -332,10 +369,11 @@
                         </div>
                     </div>
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-03.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -345,10 +383,11 @@
                         </div>
                     </div>
                     
-                    <div class="shows-card-outer-container">
+                    <div class="shows-card-container">
                         <div class="shows-card">
-                            <div class="shows-card-image-container" style="width: 207px; height: 207px; overflow: hidden">
-                                <img src="./assets/your-shows-section/shows-card-image-01.png" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                            <div class="shows-card-image-container">
+                                <div class="shows-card-image-overlay-shadow-container"></div>
+                                <img src="./assets/your-shows-section/shows-card-image-04.png">
                             </div>
     
                             <div class="shows-card-details-container">
@@ -364,106 +403,116 @@
         </div>
     </main>
 
-    <footer class="music-player-container">
-        <div class="player-left-container">
-            <div class="now-playing-container">
-                <div class="now-playing-song-image-container">
-                    <img src="./assets/footer/now-playing-song-image.jpg" alt="">
-                </div>
 
-                <div class="now-playing-song-details-container">
-                    <div class="song-title">
-                        Dreaming On
+    <!-- =========================================== F O O T E R =============================================== -->
+    <footer>
+        <div class="music-player-container">
+            <div class="player-left-container">
+                <div class="now-playing-container">
+                    <div class="now-playing-song-image-container">
+                        <img src="./assets/footer/now-playing-song-image.jpg" alt="">
                     </div>
-                    <div class="artist-credits">
-                        NEFFEX
+    
+                    <div class="now-playing-song-details-container">
+                        <div class="song-title">
+                            Dreaming On
+                        </div>
+                        <div class="artist-credits">
+                            NEFFEX
+                        </div>
                     </div>
-                </div>
-
-                <div class="favorite-icon-container">
-                    <img src="./assets/footer/green-heart-icon.svg" alt="favorite">
+    
+                    <button class="favorite-icon-button scale-up-button">
+                        <img src="./assets/footer/green-heart-icon.svg" alt="favorite">
+                    </button>
                 </div>
             </div>
-        </div>
-
-        <div class="player-center-container">
-            <div class="player-central-controls-container">
-                
-                <div class="main-controls-container">
-
-                    <button class="main-controls-button">
-                        <img src="./assets/footer/shuffle-icon.svg" alt="">
-                    </button>
+    
+            <div class="player-center-container">
+                <div class="player-central-controls-container">
                     
-                    <button class="main-controls-button">
-                        <img src="./assets/footer/skip-previous-icon.svg" alt="">
-                    </button>
-
-                    <button class="main-controls-button">
-                        <img src="./assets/footer/play-icon.svg" alt="">
-                    </button>
-
-                    <button class="main-controls-button">
-                        <img src="./assets/footer/skip-next-icon.svg" alt="">
-                    </button>
-
-                    <button class="main-controls-button">
-                        <img src="./assets/footer/repeat-icon.svg" alt="">
-                    </button>
-
+                    <div class="main-controls-container">
+    
+                        <button class="main-controls-button opacity-change-button">
+                            <img src="./assets/footer/shuffle-icon.svg" alt="">
+                        </button>
+                        
+                        <button class="main-controls-button opacity-change-button" id="music-skip-previous-button">
+                            <img src="./assets/footer/skip-previous-icon.svg" alt="">
+                        </button>
+    
+                        <button class="main-controls-button scale-up-button" id="footer-play-button">
+                            <img src="./assets/footer/play-icon.svg" alt="">
+                        </button>
+    
+                        <button class="main-controls-button opacity-change-button" id="music-skip-next-button">
+                            <img src="./assets/footer/skip-next-icon.svg" alt="">
+                        </button>
+    
+                        <button class="main-controls-button opacity-change-button">
+                            <img src="./assets/footer/repeat-icon.svg" alt="">
+                        </button>
+    
+                    </div>
+    
+                    <div class="time-controls-container">
+                        <div class="time-stamp-left">
+                            2:11
+                        </div>
+    
+                        <div class="time-slider">
+    
+                        </div>
+    
+                        <div class="time-stamp-right">
+                            2:42
+                        </div>
+                    </div>
+    
                 </div>
-
-                <div class="time-controls-div">
-                    <div class="time-stamp-left">
-                        2:11
-                    </div>
-
-                    <div class="time-slider">
-
-                    </div>
-
-                    <div class="time-stamp-right">
-                        2:42
-                    </div>
-                </div>
-
+                
             </div>
-            
-        </div>
-
-        <div class="player-right-container">
-            <div class="player-right-controls-container">
-                <button class="player-right-controls-button">
-                    <img src="./assets/footer/microphone-icon.svg" alt="">
-                </button>
-                
-                <button class="player-right-controls-button">
-                    <img src="./assets/footer/queue-icon.svg" alt="">
-                </button>
-                
-                <button class="player-right-controls-button">
-                    <img src="./assets/footer/device-icon.svg" alt="">
+    
+            <div class="player-right-container">
+                <div class="player-right-controls-container">
+                    <button class="player-right-controls-button opacity-change-button">
+                        <img src="./assets/footer/microphone-icon.svg" alt="">
+                    </button>
                     
-                    <!-- to be visible on click -->
-                    <div class="playing-on-device-container" style="background-color: #1ed760;">
+                    <button class="player-right-controls-button opacity-change-button">
+                        <img src="./assets/footer/queue-icon.svg" alt="">
+                    </button>
+                    
+                    <button class="player-right-controls-button" id="playing-on-device-button">
+                        <img src="./assets/footer/device-icon.svg" alt="">
+                        
                         <div class="arrow-indicator-container">
                             <img src="./assets/footer/upward-triangle.svg" alt="">
-                        </div>
-                        <div class="device-name-container">
-                            <img src="./assets/footer/speaker-black.svg" alt="">
-                            Listening on ASUS-ROG-G531GT
-                        </div>
+                        </div>                       
+                    </button>
+    
+                    <div class="volume-control-container">
+                        <button class="player-right-controls-button opacity-change-button" id="volume-control-button">
+                            <img src="./assets/footer/volume-control-icon.svg" alt="">
+                        </button>
+                        
+                        <div class="volume-level-slider"></div>
                     </div>
-                </button>
+                    
+                    <button class="player-right-controls-button opacity-change-button">
+                        <img src="./assets/footer/expand-icon.svg" alt="">                        
+                    </button>
+    
+                </div>
+            </div>
+        </div>
 
-                <button class="player-right-controls-button">
-                    <img src="./assets/footer/volume-control-icon.svg" alt="">
-                </button>
-
-                <button class="player-right-controls-button">
-                    <img src="./assets/footer/expand-icon.svg" alt="">
-                </button>
-
+        <div class="footer-bottom-container">
+            <div class="playing-on-device-details-container">
+                <div class="device-name-container">
+                    <img src="./assets/footer/speaker-black.svg" alt="">
+                    Listening on ASUS-ROG-G531GT
+                </div>
             </div>
         </div>
     </footer>
