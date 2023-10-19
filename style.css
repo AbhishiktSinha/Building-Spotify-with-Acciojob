@@ -48,8 +48,8 @@ button img{
     background-color: transparent;
 }
 .round-button{
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     
     display: flex;
     justify-content: center;
@@ -69,7 +69,7 @@ button img{
 .scale-down-button, .scale-up-button{
     transition: transform 0.1s linear;
 }
-.opacity-change-button{
+.opacity-change-button > img{
     opacity: 65%;
 }
 
@@ -261,6 +261,8 @@ main section{
     overflow: hidden;
 
     position: relative;
+    
+    cursor: pointer;
 }
 .hero-card-image-container{
     width: 5.2vw;
@@ -329,14 +331,22 @@ main section{
     position: absolute;
     right: 3%;
     /* z-index: 1; */
+    
+    /* border: 1px solid #1ed760; */
+    /* background-color: #1ed760; */
+    opacity: 150%;
+    border-radius: 50%;
+    overflow: hidden;
+
+    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.571);
 
     visibility: hidden;
 }
 .hero-card-green-play-button > img{
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     opacity: 100%;
     /* filter: brightness(200%); */
@@ -415,6 +425,8 @@ main section{
     justify-content: flex-start;
 
     border-radius: 4px;
+
+    cursor: pointer;
 }
 .shows-card{
     width: 100%;
@@ -431,7 +443,7 @@ main section{
 }
 .shows-card-image-container{
     width: 100%;
-    height: 65%;
+    height: 67%;
     overflow: hidden;
 
     border-radius: 8px;
@@ -440,13 +452,13 @@ main section{
 }
 .shows-card-image-overlay-shadow-container{
     width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0), transparent);
+    height: 40%;
+    background: linear-gradient(180deg, rgba(0, 0, 0), transparent) !important;
 
     position: absolute;
     top: 0px;
     
-    opacity: 60%;
+    opacity: 70%;
     
     /* display: none; */
 }
@@ -711,7 +723,7 @@ footer{
 .time-slider{
     width: 80%;
     /* height: 100%; */
-    border: 2.5px solid rgb(186, 186, 186);
+    border: 2.5px solid rgba(255, 255, 255, 0.364);
     border-radius: 2.5px;
 }
 
@@ -770,7 +782,7 @@ footer{
 .volume-level-slider{
     /* width: 70%; */
     width: inherit;
-    border: 2px solid rgb(186, 186, 186);
+    border: 2px solid rgb(255, 255, 255, 0.364);
     border-radius: 4px;
 }
 
@@ -819,9 +831,12 @@ footer{
 .scale-up-button:hover{
     transform: scale(1.1, 1.1);
 }
-.opacity-change-button:hover{
+.opacity-change-button>img:hover{
     opacity: 100%;
     filter: brightness(120%);
+}
+.round-button:hover{
+    opacity: 150%;
 }
 
 
@@ -836,6 +851,8 @@ nav{
 }
 .profile-button{
     background-color: rgb(0, 0, 0);
+}.profile-name-container:hover{
+    text-decoration: underline;
 }
 
 
@@ -852,23 +869,23 @@ main{
     background: transparent !important;
 }
 .hero-card{
-    background-color: rgba(145, 145, 145, 0.12);
+    background-color: rgba(145, 145, 145, 0.095);
     .hero-card-title{
         background: transparent;
     }
 
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.282);
 
-    transition: background-color 0.12s linear, button 0.1s, linear;
+    transition: background-color 0.25s linear;
 }
 .hero-card-green-play-button{
-    transition: visibility 0.12s linear;
+    transition: visibility 0.05s linear, transform 0.09s linear;
 }
 .hero-card:hover{
     .hero-card-green-play-button{
         visibility: visible;
     }
-    background-color: rgba(255, 255, 255, 0.107);
+    background-color: rgba(255, 255, 255, 0.118);
 }
 
 .shows-header > a{
@@ -884,11 +901,12 @@ main{
     background: none
 }
 .shows-card-container{
-    background-color: rgba(0, 0, 0, 0.45) !important;
-    transition: box-shadow 0.12s linear;
+    /* background-color: rgba(0, 0, 0, 0.45) !important; */
+    background-color: #181818 !important;
+    transition: box-shadow 0.25s linear;
 }
 .shows-card-container:hover{
-    box-shadow: 5px 5px 25px rgba(158, 158, 158, 0.172) inset;
+    box-shadow: 2px 5px 30px rgba(158, 158, 158, 0.516);
 }
 
 footer{
@@ -898,6 +916,13 @@ footer div, button{
     background: none;
 }.shows-card-details-container h3,p{
     background: none;
+}
+.now-playing-song-details-container > div:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.time-stamp-left, .time-stamp-right{
+    cursor:default;
 }
 
 
@@ -921,5 +946,5 @@ main:hover::-webkit-scrollbar-thumb{
     background: none;
 }
 .side-navbar-link-container:hover{
-    background-color: rgba(255, 255, 255, 0.116);
+    background-color: rgba(255, 255, 255, 0.118);
 }

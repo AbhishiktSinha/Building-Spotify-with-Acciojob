@@ -176,20 +176,38 @@ main{
     padding-block-start: 0.6%;
 }
 .hero-icon-container{
-    width: 20%;
+    width: max-content;
+    min-width: 20%;
     display: flex;
     align-items: center;
     justify-content: left;
-    column-gap: 10%;
+    column-gap: 2vw;
 }
 .hero-icon-container > button {
-    height: 40px;
+    /* height: 40px; */
     width: 40px;
+    min-width: 36px;
+    aspect-ratio: 1;
 
     overflow: hidden;
 
     border-radius: 50%;
+
+    >img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: transparent;
+    }
 }
+.heart-button > img{
+    width: 80% !important;
+    height: 80% !important;
+}
+.play-button-green{
+    opacity: 200%;
+}
+
 .hero-section-bottom-lower{
     box-sizing: border-box;
     padding-inline-start: 2%;
@@ -263,12 +281,16 @@ main{
 }
 
 .number-title-container{
-    width: 19%;
+    /* width: fit-content; */
+    min-width: 19%;
     display: flex;
     justify-content: left;
     align-items: center;
 
     column-gap: 5%;
+
+    /* max-width: 20%;
+    min-width:143px; */
 } 
 .serial-number{
     min-width: 16px;
@@ -286,26 +308,32 @@ main{
 }
 
 .playlist-song-container{
-    width: 100%;
+    min-width: fit-content;
     display: flex;
     justify-content: left;
+    align-items: center;
     column-gap: 5%;
 }
 .song-image-container{
-    width: 35px;
-    height: 40px;
+    max-width: 35px;
+    min-width: 30px;
+    /* height: 40px; */
+    /* max-height: 40px; */
+    aspect-ratio: 0.72;
     overflow: hidden;
 }        
 .song-image-container > img{
     width: 250%;
     height: 160%;
     
-    object-fit: cover;
+    object-fit: fill;
 }
 .playlist-song-details-container{
     display:flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;  
+    
+    text-wrap: nowrap;
 }
 .playlist-song-details-container > .song-title{
     font-size: var(--normal-size);
@@ -316,7 +344,7 @@ main{
 
 
 .playlist-item-right-container{
-    width: 8%;
+    min-width: 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -361,7 +389,7 @@ main{
 
 
 .songs-list-item-container:hover{
-    background-color: rgba(35, 35, 35, 0.328);
+    background-color: rgba(255, 255, 255, 0.116);
     .playlist-item-right-container > button > img{
         visibility:visible;
     }
