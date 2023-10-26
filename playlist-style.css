@@ -61,7 +61,7 @@ body{
 .album-art-side-navbar-footer-container > img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* --------------------------------------------------------------- M A I N ------------ */
@@ -214,7 +214,7 @@ main{
     padding-inline-end: 0.5%;
 }
 .songs-list-header-row{
-    width: 74.5%;
+    width: 75%;
     padding-inline-start: 2%;
     padding-inline-end: 0.6%;
 
@@ -244,7 +244,7 @@ main{
     height: 45%;
     box-sizing: border-box;
     padding-block: 0.5%;
-    padding-inline-start: 1.5%;
+    padding-inline-start: 2%;
     padding-inline-end: 0.5%;
     
     display: flex;
@@ -344,10 +344,31 @@ main{
 
 
 .playlist-item-right-container{
-    min-width: 8%;
+    min-width: 10%;
+    max-width: fit-content;
+    /* min-width: fit-content;
+    min-width: max-content; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
+
+    /* column-gap: 2%; */
+
+    >div{
+        margin-inline: 10%;
+    }
+
+    >button{
+        width: var(--bigger-size);
+        min-width: 14px;
+        /* width: calc(1rem + 0.3vw);
+        aspect-ratio: 1;
+        overflow: hidden;*/
+        >img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 }    
        
 .playlist-item-heart-button > img{
@@ -362,6 +383,12 @@ main{
 }
 .music-player-container{
     height: 100%;
+}
+.player-left-container{
+    min-width: 167px;
+}
+.player-right-container{
+    min-width: 194px;
 }
 .playing-on-device-details-container{
     display: none;
@@ -400,5 +427,59 @@ main{
     }
     .playlist-item-play-button > img{
         visibility: visible;
+    }
+}
+
+
+
+
+
+
+
+/* =====================>>>>>>> M E D I A - Q U E R I E S <<<<<<============ */
+/* @media only screen and (max-width: 940px){
+    .side-navbar-link-container{
+        padding-inline-start: 2%;
+        column-gap: 3%;
+    }
+}
+@media only screen and (max-width: 814px){
+}
+@media only screen and (max-width: 741px){
+    .link-text-container{
+        font-size: var(--littler-size);
+    }
+} */
+@media only screen and (max-width: 965px){
+    .songs-list-header-row{
+        padding-inline-end: 0;
+        width: 78%;
+    }
+    .playlist-item-right{
+        >div{
+            margin-inline: 5%;
+        }
+    }
+    .playlist-item-heart-button{
+        overflow: hidden;
+        >img{
+            width: 150% !important;
+            height: 150% !important;
+        }
+    }
+} 
+@media only screen and (max-width: 940px){
+    body{
+        grid-template-columns: 157px 1fr;
+    }
+}
+@media only screen and (max-width: 875px){
+    .songs-list-header-row{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 799px){
+    .songs-list-header-row{
+        width: 83%;
     }
 }
