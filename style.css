@@ -778,7 +778,23 @@ footer{
     /* height: 100%; */
     border: 2.5px solid rgba(255, 255, 255, 0.364);
     border-radius: 2.5px;
+
+    position: relative;
+    
+    .time-progress-slider{
+        width: 80%;        
+        border: 2px solid rgba(255, 255, 255, 0.796);
+
+        
+
+        position: absolute;        
+        top: -2px;
+        left: -1px;
+
+        border-radius: 4px;
+    }
 }
+
 
 /* ************************************ RIGHT */
 .player-right-container{
@@ -865,6 +881,20 @@ footer{
     min-width: 50px;
     border: 2px solid rgb(255, 255, 255, 0.364);
     border-radius: 4px;
+
+    position: relative;
+
+    .current-volume-level{
+        width: 80%;        
+        border: 2px solid rgba(255, 255, 255, 0.779);
+        border-radius: 4px;
+
+        
+
+        position: absolute;        
+        top: -2px;
+        left: -2px;
+    }
 }
 
 /* ---------------------------------- FOOTER BOTTOM ------------ */
