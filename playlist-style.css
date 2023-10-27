@@ -359,7 +359,7 @@ main{
     }
 
     >button{
-        width: var(--bigger-size);
+        width: var(--biggerhert-button-size);
         min-width: 14px;
         /* width: calc(1rem + 0.3vw);
         aspect-ratio: 1;

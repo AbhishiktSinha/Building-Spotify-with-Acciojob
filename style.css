@@ -39,7 +39,7 @@ button{
     /* height: fit-content; */
     padding: 0;
     border: none;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     /* cursor: pointer !important; */
