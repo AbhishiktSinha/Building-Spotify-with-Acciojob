@@ -200,7 +200,7 @@ main{
         background: transparent;
     }
 }
-.heart-button > img{
+.hero-heart-button > img{
     width: 80% !important;
     height: 80% !important;
 }
