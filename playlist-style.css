@@ -26,11 +26,12 @@ body{
     height: 51%;
 }
 .spotify-logo-row-container{
-    padding-block: 1%;
+    padding-block-start: 1%;
+    padding-block-end: 4.5%;
 }
 .spotify-logo-image-container{
-    width: 100px;
-    height: 44px;
+    width: 135px;
+    height: 42px;
 }
 .side-navbar-link-container{
     padding-block: 2%;
