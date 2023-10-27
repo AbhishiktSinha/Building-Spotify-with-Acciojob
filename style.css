@@ -666,7 +666,7 @@ footer{
 }
 .music-player-container button{
     min-width: 35px;
-    min-width: none;height: 35px;    
+    height: 35px;    
     overflow: hidden;
 }
 .music-player-container button>img{
@@ -674,6 +674,17 @@ footer{
     height: 50%;
     object-fit: contain;
 }
+.slider-control-button{
+    /* min-width: 4px; */
+    visibility: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.794);
+    border-radius: 50%;
+
+    position: absolute;
+    right: -4px;
+    top: -5px;
+}
+
 /* ************************************ LEFT */
 .player-left-container{
     flex: 1;
@@ -716,7 +727,15 @@ footer{
 .now-playing-song-details-container > .artist-credits{
     font-size: var(--small-size);
 }
-
+.favorite-icon-button{
+    min-width: 25px !important;
+    height: 25px !important;
+    >img{
+        width: 70% !important;
+        height: 70% !important;
+        object-fit: contain;
+    }
+}
 /* *********************************** CENTER */
 .player-center-container{
     /* width: 50%; */
@@ -792,8 +811,10 @@ footer{
         left: -1px;
 
         border-radius: 4px;
+
     }
 }
+
 
 
 /* ************************************ RIGHT */
@@ -1033,10 +1054,23 @@ footer div, button{
 }
 .now-playing-song-details-container > div:hover{
     text-decoration: underline;
-
 }
 .time-stamp-left, .time-stamp-right{
     cursor:default;
+}
+.time-slider:hover{
+    .time-progress-slider{
+        .slider-control-button{
+            visibility: visible;
+        }
+    }
+}
+.volume-level-slider:hover{
+    .current-volume-level{
+        .slider-control-button{
+            visibility: visible;
+        }
+    }
 }
 
 
